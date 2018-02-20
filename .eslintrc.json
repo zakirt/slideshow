@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "ecmaFeatures": {
+            "jsx": true           
+        },
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-const-assign": "warn",
+        "no-this-before-super": "warn",
+        "no-undef": "warn",
+        "no-unreachable": "warn",
+        "no-unused-vars": "warn",
+        "constructor-super": "warn",
+        "valid-typeof": "warn",
+        "semi": "warn",
+        "curly": "warn",
+        "guard-for-in": "warn",
+        "no-else-return": "warn",
+        "no-with": "warn",
+        "strict": "warn",
+        "semi-spacing": "warn",
+        "getter-return": "warn",
+        "quotes": [1, "single", {
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
+        }],
+        "require-await": "warn"
+    }
+}
