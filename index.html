@@ -11,16 +11,7 @@
 <body>
     <div class="container">
         <div class="slider" id="slider">
-            <div class="slider-inner-wrap" data-slider-inner-wrap="data-slider-inner-wrap">
-                <div class="slider-slide" data-slide="data-slide" data-slide-active="data-slide-active">
-                    <img src="http://a.abcnews.com/images/International/gty_lion_dm_130510_wmain.jpg" />
-                </div>
-                <div class="slider-slide" data-slide="data-slide">
-                    <img src="http://blog.iwin.com/wp-content/uploads/2014/10/chickens.jpg" />
-                </div>
-                <div class="slider-slide" data-slide="data-slide">
-                    <img src="http://cdn.emgn.com/wp-content/uploads/2014/12/EMGN-Nightmare-Animals-1.jpeg" />
-                </div>
+            <div class="slider-inner-wrap" data-slider-inner-wrap="data-slider-inner-wrap">             
             </div>
             <div class="slider-control slider-control-prev">
                 <i class="fa fa-chevron-circle-left"></i>
@@ -30,11 +21,35 @@
             </div>
         </div>
     </div>
+    <script src="scripts/slide-factory.js"></script>
     <script src="scripts/slider.js"></script>
+    <script src="scripts/slideshow-image-service.js"></script>
+    <script src="scripts/slider-images-adapter.js"></script>
     <script>
-        const s1 = slider.sliderFactory({
-            sliderElement: document.querySelector("#slider")
+        // const slide = slideshow.slideFactory({
+        //     element: document.querySelector('#slider'),
+        //     title: 'Hello world'
+        // });
+
+        const slides = [new Image(), new Image(), new Image()];
+        slides[0].src = 'http://a.abcnews.com/images/International/gty_lion_dm_130510_wmain.jpg';
+        slides[1].src = 'http://blog.iwin.com/wp-content/uploads/2014/10/chickens.jpg';
+        slides[2].src = 'http://cdn.emgn.com/wp-content/uploads/2014/12/EMGN-Nightmare-Animals-1.jpeg';
+        const slideImages = slideshow.slideshowImageService.fetchImages();
+        slideImages.then((slides) => {
+            const s1 = slideshow.sliderImagesAdapter.sliderFactory({
+                sliderElement: document.querySelector('#slider'),
+                transitionDuration: '0.5s',
+                slides: slides
+            });
         });
+
+
+        // const s1 = slideshow.sliderFactory({
+        //     sliderElement: document.querySelector('#slider'),
+        //     transitionDuration: '0.5s',
+        //     slides: slides        
+        // });
     </script>
 </body>
 
