@@ -1,0 +1,36 @@
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .slider {
+    box-sizing: border-box;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-slide {
+    box-sizing: border-box;
+    float: left;
+    overflow: hidden;
+  }
+  .slider-slide img {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .slider-control {
+    color: #fff;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    top: 40%;
+  }
+  .slider-control.slider-control-prev {
+    left: 5px;
+  }
+  .slider-control.slider-control-next {
+    right: 5px;
+  }  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="styles/slider.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider" id="slider">
+            <div class="slider-inner-wrap" data-slider-inner-wrap="data-slider-inner-wrap">
+                <div class="slider-slide" data-slide="data-slide" data-slide-active="data-slide-active">
+                    <img src="http://a.abcnews.com/images/International/gty_lion_dm_130510_wmain.jpg" />
+                </div>
+                <div class="slider-slide" data-slide="data-slide">
+                    <img src="http://blog.iwin.com/wp-content/uploads/2014/10/chickens.jpg" />
+                </div>
+                <div class="slider-slide" data-slide="data-slide">
+                    <img src="http://cdn.emgn.com/wp-content/uploads/2014/12/EMGN-Nightmare-Animals-1.jpeg" />
+                </div>
+            </div>
+            <div class="slider-control slider-control-prev">
+                <i class="fa fa-chevron-circle-left"></i>
+            </div>
+            <div class="slider-control slider-control-next">
+                <i class="fa fa-chevron-circle-right"></i>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/slider.js"></script>
+    <script>
+        const s1 = slider.sliderFactory({
+            sliderElement: document.querySelector("#slider")
+        });
+    </script>
+</body>
+
+</html>
